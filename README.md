@@ -3,7 +3,7 @@ Claro! Vou atualizar a documentação do seu pacote para refletir as novas funci
 ### Atualização do `README.md`
 
 Pacote: 
-[NPM JS]((https://www.npmjs.com/package/git-commit-lib))
+[NPM JS](https://www.npmjs.com/package/git-commit-lib)
 
 ```markdown
 # Git Commit CLI
