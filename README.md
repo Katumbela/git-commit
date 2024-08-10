@@ -1,8 +1,4 @@
  
-
-Pacote: 
-[NPM JS](https://www.npmjs.com/package/git-commit-lib)
-
 ```markdown
 # Git Commit CLI
 
@@ -75,6 +71,31 @@ npx commit-kat
    npx commit-kat --all --push
    ```
 
+## Conventional Commits
+
+O `commit-kat` segue a [Conventional Commits](https://www.conventionalcommits.org/) para criar mensagens de commit mais informativas e padronizadas:
+
+- **`feat:`** Para novos recursos ou adições.
+- **`fix:`** Para correções de bugs.
+- **`chore:`** Para tarefas e manutenção do projeto (como exclusões de arquivos).
+
+### Exemplo de Mensagens de Commit
+
+- **Para arquivos não rastreados (adicionados):**
+  ```bash
+  git commit -m "feat: commit 1 - arquivo_exemplo.js"
+  ```
+
+- **Para arquivos modificados:**
+  ```bash
+  git commit -m "fix: commit 2 - arquivo_modificado.js"
+  ```
+
+- **Para arquivos excluídos:**
+  ```bash
+  git commit -m "chore: commit 3 - arquivo_excluido.js"
+  ```
+
 ## Autor
 
 João Afonso Katombela  
@@ -88,5 +109,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests o
 ## Licença
 
 Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
+```
  
