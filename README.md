@@ -1,4 +1,3 @@
-Claro! Vou atualizar a documentação do seu pacote para refletir as novas funcionalidades. Aqui está um exemplo de como você pode atualizar o `README.md` e criar uma página básica para o GitHub Pages.
 
 ### Atualização do `README.md`
 
