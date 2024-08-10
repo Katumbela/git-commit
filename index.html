@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commit CLI</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Git Commit CLI</h1>
+        <p class="lead">Uma ferramenta CLI para adicionar e commitar arquivos não rastreados e modificados em um repositório Git.</p>
+
+        <h2>Instalação</h2>
+        <p>Para instalar o pacote globalmente e usá-lo em qualquer projeto, execute:</p>
+        <pre><code>npm install -g git-commit-lib</code></pre>
+        <p>Ou você pode instalar localmente em um projeto específico e usar com <code>npx</code>:</p>
+        <pre><code>npm install git-commit-lib</code></pre>
+
+        <h2>Uso</h2>
+        <p>Depois de instalar, você pode usar o comando <code>commit-kat</code> para adicionar e commitar arquivos em seu repositório Git.</p>
+
+        <h3>Comando Básico</h3>
+        <pre><code>npx commit-kat</code></pre>
+
+        <h3>Flags</h3>
+        <ul>
+            <li><code>--all</code> ou <code>-a</code>: Comita todos os arquivos não rastreados e modificados de uma vez.
+                <pre><code>npx commit-kat --all</code></pre>
+            </li>
+            <li><code>--push</code> ou <code>-p</code>: Comita os arquivos e faz um <code>git push</code> no final.
+                <pre><code>npx commit-kat --push</code></pre>
+            </li>
+            <li><code>--all --push</code> ou <code>-a -p</code>: Comita todos os arquivos de uma vez e faz um <code>git push</code> no final.
+                <pre><code>npx commit-kat --all --push</code></pre>
+            </li>
+        </ul>
+
+        <h2>Autor</h2>
+        <p>João Afonso Katombela<br>
+        <a href="https://www.linkedin.com/in/joao-afonso-katumbela">LinkedIn</a><br>
+        <a href="https://github.com/katumbela">GitHub</a></p>
+
+        <h2>Contribuindo</h2>
+        <p>Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou relatar problemas enviando me uma mensagem ou email.</p>
+
+        <h2>Licença</h2>
+        <p>Este projeto está licenciado sob a MIT License - veja o arquivo <a href="LICENSE">LICENSE</a> para detalhes.</p>
+    </div>
+</body>
+</html>
+```
