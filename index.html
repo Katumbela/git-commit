@@ -1,53 +1,133 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Commit CLI</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        code {
+            background: #eee;
+            border-radius: 3px;
+            padding: 2px 4px;
+            font-size: 90%;
+        }
+        pre {
+            background: #eee;
+            border-radius: 3px;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="mt-5">Git Commit CLI</h1>
-        <p class="lead">Uma ferramenta CLI para adicionar e commitar arquivos não rastreados e modificados em um repositório Git.</p>
 
-        <h2>Instalação</h2>
-        <p>Para instalar o pacote globalmente e usá-lo em qualquer projeto, execute:</p>
-        <pre><code>npm install -g git-commit-lib</code></pre>
-        <p>Ou você pode instalar localmente em um projeto específico e usar com <code>npx</code>:</p>
-        <pre><code>npm install git-commit-lib</code></pre>
+    <h1>Git Commit CLI</h1>
 
-        <h2>Uso</h2>
-        <p>Depois de instalar, você pode usar o comando <code>commit-kat</code> para adicionar e commitar arquivos em seu repositório Git.</p>
+    <p>Uma ferramenta CLI para adicionar e commitar arquivos não rastreados e modificados em um repositório Git.</p>
 
-        <h3>Comando Básico</h3>
-        <pre><code>npx commit-kat</code></pre>
+    <h2>Instalação</h2>
 
-        <h3>Flags</h3>
-        <ul>
-            <li><code>--all</code> ou <code>-a</code>: Comita todos os arquivos não rastreados e modificados de uma vez.
-                <pre><code>npx commit-kat --all</code></pre>
-            </li>
-            <li><code>--push</code> ou <code>-p</code>: Comita os arquivos e faz um <code>git push</code> no final.
-                <pre><code>npx commit-kat --push</code></pre>
-            </li>
-            <li><code>--all --push</code> ou <code>-a -p</code>: Comita todos os arquivos de uma vez e faz um <code>git push</code> no final.
-                <pre><code>npx commit-kat --all --push</code></pre>
-            </li>
-        </ul>
+    <p>Para instalar o pacote globalmente e usá-lo em qualquer projeto, execute:</p>
 
-        <h2>Autor</h2>
-        <p>João Afonso Katombela<br>
-        <a href="https://www.linkedin.com/in/joao-afonso-katumbela">LinkedIn</a><br>
-        <a href="https://github.com/katumbela">GitHub</a></p>
+    <pre><code>npm install -g git-commit-lib</code></pre>
 
-        <h2>Contribuindo</h2>
-        <p>Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou relatar problemas enviando me uma mensagem ou email.</p>
+    <p>Ou você pode instalar localmente em um projeto específico e usar com <code>npx</code>:</p>
 
-        <h2>Licença</h2>
-        <p>Este projeto está licenciado sob a MIT License - veja o arquivo <a href="LICENSE">LICENSE</a> para detalhes.</p>
-    </div>
+    <pre><code>npm install git-commit-lib</code></pre>
+
+    <h2>Uso</h2>
+
+    <p>Depois de instalar, você pode usar o comando <code>commit-kat</code> para adicionar e commitar arquivos em seu repositório Git.</p>
+
+    <h3>Comando Básico</h3>
+
+    <pre><code>npx commit-kat</code></pre>
+
+    <h3>Flags</h3>
+
+    <ul>
+        <li><code>--all</code> ou <code>-a</code>: Comita todos os arquivos não rastreados e modificados de uma vez.
+            <pre><code>npx commit-kat --all</code></pre>
+        </li>
+        <li><code>--push</code> ou <code>-p</code>: Comita os arquivos e faz um <code>git push</code> no final.
+            <pre><code>npx commit-kat --push</code></pre>
+        </li>
+        <li><code>--all --push</code> ou <code>-a -p</code>: Comita todos os arquivos de uma vez e faz um <code>git push</code> no final.
+            <pre><code>npx commit-kat --all --push</code></pre>
+        </li>
+    </ul>
+
+    <h3>Exemplos</h3>
+
+    <ol>
+        <li>Adicionar e commitar arquivos não rastreados e modificados separadamente:
+            <pre><code>npx commit-kat</code></pre>
+        </li>
+        <li>Adicionar e commitar todos os arquivos de uma vez:
+            <pre><code>npx commit-kat --all</code></pre>
+        </li>
+        <li>Adicionar e commitar arquivos, e fazer um push para o repositório remoto:
+            <pre><code>npx commit-kat --push</code></pre>
+        </li>
+        <li>Adicionar e commitar todos os arquivos de uma vez e fazer um push:
+            <pre><code>npx commit-kat --all --push</code></pre>
+        </li>
+    </ol>
+
+    <h2>Conventional Commits</h2>
+
+    <p>O <code>commit-kat</code> segue a <a href="https://www.conventionalcommits.org/" target="_blank">Conventional Commits</a> para criar mensagens de commit mais informativas e padronizadas:</p>
+
+    <ul>
+        <li><code>feat:</code> Para novos recursos ou adições.</li>
+        <li><code>fix:</code> Para correções de bugs.</li>
+        <li><code>chore:</code> Para tarefas e manutenção do projeto (como exclusões de arquivos).</li>
+    </ul>
+
+    <h3>Exemplo de Mensagens de Commit</h3>
+
+    <ul>
+        <li>Para arquivos não rastreados (adicionados):
+            <pre><code>git commit -m "feat: commit 1 - arquivo_exemplo.js"</code></pre>
+        </li>
+        <li>Para arquivos modificados:
+            <pre><code>git commit -m "fix: commit 2 - arquivo_modificado.js"</code></pre>
+        </li>
+        <li>Para arquivos excluídos:
+            <pre><code>git commit -m "chore: commit 3 - arquivo_excluido.js"</code></pre>
+        </li>
+    </ul>
+
+    <h2>Autor</h2>
+
+    <p>João Afonso Katombela<br>
+    <a href="https://www.linkedin.com/in/joao-afonso-katumbela" target="_blank">LinkedIn</a><br>
+    <a href="https://github.com/katumbela" target="_blank">GitHub</a></p>
+
+    <h2>Contribuindo</h2>
+
+    <p>Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou relatar problemas.</p>
+
+    <h2>Licença</h2>
+
+    <p>Este projeto está licenciado sob a MIT License - veja o arquivo <a href="LICENSE">LICENSE</a> para detalhes.</p>
+
 </body>
 </html>
-```
