@@ -1,5 +1,4 @@
-
-### Atualização do `README.md`
+ 
 
 Pacote: 
 [NPM JS](https://www.npmjs.com/package/git-commit-lib)
